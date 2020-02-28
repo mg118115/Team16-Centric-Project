@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
+using System;
 
 namespace Team_16_Centric_Project.Models
 {
@@ -79,6 +81,25 @@ namespace Team_16_Centric_Project.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+        [Required]
+        [Display(Name = "First Name")]
+        public string firstName { get; set; }
+        [Required]
+        [Display(Name = "Last Name")]
+        public string lastName{get; set;}
+
+        [Required]
+        [Display(Name = "Business Unit")]
+        public string businessUnit { get; set;}
+
+        [Required]
+        [Display(Name = "Hire Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy", ApplyFormatInEditMode =true)]
+        public Nullable<System.DateTime> hireDate { get; set; }
+        [Required]
+        [Display(Name = "Title")]
+        public string Title { get; set; }
     }
 
     public class ResetPasswordViewModel
@@ -100,6 +121,8 @@ namespace Team_16_Centric_Project.Models
         public string ConfirmPassword { get; set; }
 
         public string Code { get; set; }
+
+
     }
 
     public class ForgotPasswordViewModel
