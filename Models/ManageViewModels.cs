@@ -2,6 +2,8 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
+using System.ComponentModel;
+using System;
 
 namespace Team_16_Centric_Project.Models
 {
@@ -41,12 +43,10 @@ namespace Team_16_Centric_Project.Models
 
     public class ChangePasswordViewModel
     {
-        [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Current password")]
         public string OldPassword { get; set; }
 
-        [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "New password")]
@@ -56,6 +56,21 @@ namespace Team_16_Centric_Project.Models
         [Display(Name = "Confirm new password")]
         [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Display(Name = "First Name")]
+        public string newFirstName { get; set; }
+        [Display(Name = "Last Name")]
+        public string newLastName { get; set; }
+
+        [Display(Name = "Business Unit")]
+        public string newBusinessUnit { get; set; }
+
+        [Display(Name = "Hire Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy", ApplyFormatInEditMode = true)]
+        public Nullable<System.DateTime> newHireDate { get; set; }
+        [Display(Name = "Title")]
+        public string newTitle { get; set; }
     }
 
     public class AddPhoneNumberViewModel
