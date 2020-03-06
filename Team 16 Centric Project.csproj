@@ -170,6 +170,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RegisterViewModelsController.cs" />
+    <Compile Include="DAL\MIS4200Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -235,6 +237,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\RegisterViewModels\Create.cshtml" />
+    <Content Include="Views\RegisterViewModels\Delete.cshtml" />
+    <Content Include="Views\RegisterViewModels\Details.cshtml" />
+    <Content Include="Views\RegisterViewModels\Edit.cshtml" />
+    <Content Include="Views\RegisterViewModels\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

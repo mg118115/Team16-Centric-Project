@@ -66,9 +66,11 @@ namespace Team_16_Centric_Project.Models
 
     public class RegisterViewModel
     {
+        
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
+        
         public string Email { get; set; }
 
         [Required]
