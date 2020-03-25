@@ -170,8 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\RegisterViewModelsController.cs" />
-    <Compile Include="DAL\MIS4200Context.cs" />
+    <Compile Include="Controllers\PeerNoteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -242,9 +241,11 @@
     <Content Include="Views\RegisterViewModels\Details.cshtml" />
     <Content Include="Views\RegisterViewModels\Edit.cshtml" />
     <Content Include="Views\RegisterViewModels\Index.cshtml" />
+    <Content Include="Views\PeerNote\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
