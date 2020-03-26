@@ -1,0 +1,36 @@
+﻿<br />
+<h1>Recognize a Peer for Their Centric Values</h1>
+<br />
+<body>
+    Please type in the email of a peer you would like to recognize, the Centric value
+    you are recognizing them for, and a comment about how they performed this value.
+    They will be notified about their value nomination.
+</body>
+<br />
+<br />
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+<table class="table-responsive">
+    <tbody>
+        <tr>
+            <td>Email:  </td>
+            <td> @Html.TextBox("Email", "Enter Email", new { style = "color:black" })</td>
+
+        </tr>
+        <tr>
+            <td>Value:  </td>
+            <td>@Html.TextBox("Value", "Enter Value", new { style = "color:black" })</td>
+
+        </tr>
+        <tr>
+            <td>Message:  </td>
+            <td>@Html.TextBox("Message", "Enter Message", new { style = "color:black" })</td>
+
+        </tr>
+    </tbody>
+</table>
+}
+<br />
+<br />
+<li>@Html.ActionLink("Send a Note", "Index", "PeerNote")</li>
