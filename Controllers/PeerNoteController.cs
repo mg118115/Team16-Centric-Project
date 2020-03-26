@@ -17,7 +17,7 @@ namespace Team_16_Centric_Project.Controllers
             // the following line has to contain the email address and password of someone
             // authorized to use the email server (you will need a valid Ohio account/password
             // for this to work)
-            myClient.Credentials = new NetworkCredential("gb538515", "Packerstd1");
+            myClient.Credentials = new NetworkCredential("gb538515", "password");
             MailMessage myMessage = new MailMessage();
 
             // the syntax here is email address, username (that will appear in the email)
