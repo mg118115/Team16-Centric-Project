@@ -191,6 +191,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -236,11 +238,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\RegisterViewModels\Create.cshtml" />
-    <Content Include="Views\RegisterViewModels\Delete.cshtml" />
-    <Content Include="Views\RegisterViewModels\Details.cshtml" />
-    <Content Include="Views\RegisterViewModels\Edit.cshtml" />
-    <Content Include="Views\RegisterViewModels\Index.cshtml" />
     <Content Include="Views\PeerNote\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
