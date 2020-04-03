@@ -40,8 +40,8 @@ namespace Team_16_Centric_Project.Models
         [Required]
         [Display(Name = "Hire Date")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy", ApplyFormatInEditMode = true)]
-        public Nullable<System.DateTime> hireDate { get; set; }
+        [DisplayFormat(DataFormatString = "{0:d}")]
+        public DateTime hireDate { get; set; }
         [Required]
         [Display(Name = "Title")]
         public string Title { get; set; }
