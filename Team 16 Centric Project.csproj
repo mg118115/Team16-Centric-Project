@@ -169,19 +169,25 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Content\DAL\MIS4200Context.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EmployeeRecognitionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NotePageController.cs" />
     <Compile Include="Controllers\PeerNoteController.cs" />
+    <Compile Include="Controllers\RecognitionDetailsController.cs" />
+    <Compile Include="Controllers\RecognitionsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\ValuesRecognitionsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\EmployeeRecognition.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\ValuesRecognition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -250,10 +256,29 @@
     <Content Include="Views\Users\Details.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\EmployeeRecognitions\Create.cshtml" />
+    <Content Include="Views\EmployeeRecognitions\Delete.cshtml" />
+    <Content Include="Views\EmployeeRecognitions\Details.cshtml" />
+    <Content Include="Views\EmployeeRecognitions\Edit.cshtml" />
+    <Content Include="Views\EmployeeRecognitions\Index.cshtml" />
+    <Content Include="Views\ValuesRecognitions\Create.cshtml" />
+    <Content Include="Views\ValuesRecognitions\Delete.cshtml" />
+    <Content Include="Views\ValuesRecognitions\Details.cshtml" />
+    <Content Include="Views\ValuesRecognitions\Edit.cshtml" />
+    <Content Include="Views\ValuesRecognitions\Index.cshtml" />
+    <Content Include="Views\Recognitions\Create.cshtml" />
+    <Content Include="Views\Recognitions\Delete.cshtml" />
+    <Content Include="Views\Recognitions\Details.cshtml" />
+    <Content Include="Views\Recognitions\Edit.cshtml" />
+    <Content Include="Views\Recognitions\Index.cshtml" />
+    <Content Include="Views\RecognitionDetails\Create.cshtml" />
+    <Content Include="Views\RecognitionDetails\Delete.cshtml" />
+    <Content Include="Views\RecognitionDetails\Details.cshtml" />
+    <Content Include="Views\RecognitionDetails\Edit.cshtml" />
+    <Content Include="Views\RecognitionDetails\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
