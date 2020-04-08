@@ -12,7 +12,8 @@ namespace Team_16_Centric_Project.Content.DAL
         public MIS4200Context() : base("name=DefaultConnection")
 
         {
-
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MIS4200Context,
+Team_16_Centric_Project.Migrations.MISContext.Configuration>("DefaultConnection"));
             // this method is a 'constructor' and is called when a new context is created
 
             // the base attribute says which connection string to use
@@ -29,5 +30,10 @@ namespace Team_16_Centric_Project.Content.DAL
         public DbSet<RecognitionDetail> RecognitionDetails { get; set; }
 
         public DbSet<User> Users { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
