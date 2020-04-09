@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using Team_16_Centric_Project.Models; // This is needed to access the models
 using System.Data.Entity; // this is needed to access the DbContext object
+using System.Data.Entity.ModelConfiguration.Conventions;
+
 namespace Team_16_Centric_Project.DAL
 {
     public class MIS4200Context : DbContext // inherits from DbContext
@@ -25,9 +27,12 @@ namespace Team_16_Centric_Project.DAL
 
         public DbSet<User> Users { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnModelCreating(DbModelBuilder modelBuilder )
         {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+
             base.OnModelCreating(modelBuilder);
         }
+        
     }
 }
