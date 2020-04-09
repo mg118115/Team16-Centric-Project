@@ -167,7 +167,6 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Content\DAL\MIS4200Context.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EmployeeRecognitionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -178,6 +177,7 @@
     <Compile Include="Controllers\RecognitionsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\ValuesRecognitionsController.cs" />
+    <Compile Include="DAL\MIS4200Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -203,8 +203,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -262,11 +260,6 @@
     <Content Include="Views\EmployeeRecognitions\Details.cshtml" />
     <Content Include="Views\EmployeeRecognitions\Edit.cshtml" />
     <Content Include="Views\EmployeeRecognitions\Index.cshtml" />
-    <Content Include="Views\ValuesRecognitions\Create.cshtml" />
-    <Content Include="Views\ValuesRecognitions\Delete.cshtml" />
-    <Content Include="Views\ValuesRecognitions\Details.cshtml" />
-    <Content Include="Views\ValuesRecognitions\Edit.cshtml" />
-    <Content Include="Views\ValuesRecognitions\Index.cshtml" />
     <Content Include="Views\Recognitions\Create.cshtml" />
     <Content Include="Views\Recognitions\Delete.cshtml" />
     <Content Include="Views\Recognitions\Details.cshtml" />
@@ -277,9 +270,15 @@
     <Content Include="Views\RecognitionDetails\Details.cshtml" />
     <Content Include="Views\RecognitionDetails\Edit.cshtml" />
     <Content Include="Views\RecognitionDetails\Index.cshtml" />
+    <Content Include="Views\ValuesRecognitions\Create.cshtml" />
+    <Content Include="Views\ValuesRecognitions\Delete.cshtml" />
+    <Content Include="Views\ValuesRecognitions\Details.cshtml" />
+    <Content Include="Views\ValuesRecognitions\Edit.cshtml" />
+    <Content Include="Views\ValuesRecognitions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

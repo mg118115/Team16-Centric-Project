@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Team_16_Centric_Project.Content.DAL;
+using Team_16_Centric_Project.DAL;
 using Team_16_Centric_Project.Models;
 
 namespace Team_16_Centric_Project.Controllers

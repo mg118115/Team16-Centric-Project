@@ -5,7 +5,7 @@ namespace Team_16_Centric_Project.Migrations.MISContext
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Team_16_Centric_Project.Content.DAL.MIS4200Context>
+    internal sealed class Configuration : DbMigrationsConfiguration<Team_16_Centric_Project.DAL.MIS4200Context>
     {
         public Configuration()
         {
@@ -13,7 +13,7 @@ namespace Team_16_Centric_Project.Migrations.MISContext
             MigrationsDirectory = @"Migrations\MISContext";
         }
 
-        protected override void Seed(Team_16_Centric_Project.Content.DAL.MIS4200Context context)
+        protected override void Seed(Team_16_Centric_Project.DAL.MIS4200Context context)
         {
             //  This method will be called after migrating to the latest version.
 
