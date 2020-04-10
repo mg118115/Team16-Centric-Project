@@ -275,6 +275,7 @@
     <Content Include="Views\ValuesRecognitions\Details.cshtml" />
     <Content Include="Views\ValuesRecognitions\Edit.cshtml" />
     <Content Include="Views\ValuesRecognitions\Index.cshtml" />
+    <Content Include="Views\Home\SocialMedia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
