@@ -8,11 +8,19 @@ namespace Team_16_Centric_Project.Models
 {
     public class EmployeeRecognition
     {
-
+        
         public int employeeRecognitionID { get; set; }
+        [Required]
+        [Display(Name = "First Name")]
         public string firstName { get; set; }
+        [Required]
+        [Display(Name = "Last Name")]
         public string lastName { get; set; }
+        [Required]
+        [Display(Name = "Email")]
         public string email { get; set; }
+        [Required]
+        [Display(Name = "Phone")]
         public string phone { get; set; }
 
         public ICollection<Recognition> Recognition { get; set; }
