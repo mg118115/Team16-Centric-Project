@@ -18,7 +18,14 @@ namespace Team_16_Centric_Project.Controllers
         // GET: UserDetails
         public ActionResult Index()
         {
-            return View(db.UserDetails.ToList());
+            if (User.Identity.IsAuthenticated)
+            {
+                return View(db.UserDetails.ToList());
+            }
+            else
+            {
+                return View("Login","Account");
+            }
         }
 
         // GET: UserDetails/Details/5
