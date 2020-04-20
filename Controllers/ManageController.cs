@@ -212,7 +212,38 @@ namespace Team_16_Centric_Project.Controllers
             }
             return RedirectToAction("Index", new { Message = ManageMessageId.RemovePhoneSuccess });
         }
+        /*
+        // GET: /Manage/ViewAccount
+        public ActionResult ViewAccount()
+        {
+            return View();
+        }
 
+        //
+        // POST: /Manage/ViewAccount
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ViewAccount(ViewAccountViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var result = await UserManager.ViewAccountAsync(User.Identity.GetUserId(), model.OldPassword, model.NewPassword);
+            if (result.Succeeded)
+            {
+                var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+                if (user != null)
+                {
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                }
+                return RedirectToAction("Index", new { Message = ManageMessageId.ChangePasswordSuccess });
+            }
+            AddErrors(result);
+            return View(model);
+        }
+        */
         //
         // GET: /Manage/ChangePassword
         public ActionResult ChangePassword()
