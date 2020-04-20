@@ -26,6 +26,7 @@ namespace Team_16_Centric_Project.DAL
         public DbSet<RecognitionDetail> RecognitionDetails { get; set; }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<UserDetails> UserDetails { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder )
         {
