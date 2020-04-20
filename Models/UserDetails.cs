@@ -8,8 +8,8 @@ namespace Team_16_Centric_Project.Models
 {
     public class UserDetails
     {
-        public class userDetails
-        {
+       
+       
            
             [Required]
             public Guid Id { get; set; }
@@ -34,6 +34,6 @@ namespace Team_16_Centric_Project.Models
             [DisplayFormat(DataFormatString = "{0:d}", ApplyFormatInEditMode = true)]
             public DateTime hireDate { get; set; }
             
-        }
+        
     }
 }
