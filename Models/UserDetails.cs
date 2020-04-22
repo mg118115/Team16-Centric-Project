@@ -13,7 +13,7 @@ namespace Team_16_Centric_Project.Models
            
             [Required]
             public Guid Id { get; set; }
-            [Required]
+            
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }

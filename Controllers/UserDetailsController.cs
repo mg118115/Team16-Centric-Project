@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -24,7 +25,7 @@ namespace Team_16_Centric_Project.Controllers
             }
             else
             {
-                return View("Login","Account");
+                return View("NotAuthenticated");
             }
         }
 
@@ -58,10 +59,20 @@ namespace Team_16_Centric_Project.Controllers
         {
             if (ModelState.IsValid)
             {
-                userDetails.Id = Guid.NewGuid();
+                Guid memberID;
+                Guid.TryParse(User.Identity.GetUserId(), out memberID);
+                userDetails.Id = memberID;
                 db.UserDetails.Add(userDetails);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                try
+                {
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception)
+                {
+
+                    return View("DuplicateUser"); 
+                } 
             }
 
             return View(userDetails);
@@ -89,13 +100,25 @@ namespace Team_16_Centric_Project.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Email,firstName,lastName,PhoneNumber,Office,Position,hireDate")] UserDetails userDetails)
         {
-            if (ModelState.IsValid)
+            if (id == null)
             {
-                db.Entry(userDetails).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            return View(userDetails);
+            User user = db.UserDetails.Find(id);
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+            Guid memberID;
+            Guid.TryParse(User.Identity.GetUserId(), out memberID);
+            if (user.ID == memberID)
+            {
+                return View(user);
+            }
+            else
+            {
+                return View("NotAuthenticated");
+            }
         }
 
         // GET: UserDetails/Delete/5
