@@ -100,25 +100,13 @@ namespace Team_16_Centric_Project.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Email,firstName,lastName,PhoneNumber,Office,Position,hireDate")] UserDetails userDetails)
         {
-            if (id == null)
+            if (ModelState.IsValid)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                db.Entry(User).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
-            User user = db.UserDetails.Find(id);
-            if (user == null)
-            {
-                return HttpNotFound();
-            }
-            Guid memberID;
-            Guid.TryParse(User.Identity.GetUserId(), out memberID);
-            if (user.ID == memberID)
-            {
-                return View(user);
-            }
-            else
-            {
-                return View("NotAuthenticated");
-            }
+            return View(User);
         }
 
         // GET: UserDetails/Delete/5
