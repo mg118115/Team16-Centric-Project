@@ -286,6 +286,11 @@
     <Content Include="Views\UserDetails\Index.cshtml" />
     <Content Include="Views\UserDetails\DuplicateUser.cshtml" />
     <Content Include="Views\UserDetails\NotAuthenticated.cshtml" />
+    <Content Include="Views\Recognitions\NotAuthenticated.cshtml" />
+    <Content Include="Views\RecognitionDetails\NotAuthenticated.cshtml" />
+    <Content Include="Views\EmployeeRecognitions\NotAuthenticated.cshtml" />
+    <Content Include="Views\ValuesRecognitions\NotAuthenticated.cshtml" />
+    <Content Include="Views\Users\NotAuthenticated.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

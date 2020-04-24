@@ -18,8 +18,15 @@ namespace Team_16_Centric_Project.Controllers
         // GET: Recognitions
         public ActionResult Index()
         {
-            var recognitions = db.Recognitions.Include(r => r.EmployeeRecognition);
-            return View(recognitions.ToList());
+            if (User.Identity.IsAuthenticated)
+            {
+                var recognitions = db.Recognitions.Include(r => r.EmployeeRecognition);
+                return View(recognitions.ToList());
+            }
+            else
+            {
+                return View("NotAuthenticated");
+            }
         }
 
         // GET: Recognitions/Details/5

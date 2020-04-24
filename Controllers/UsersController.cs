@@ -19,16 +19,21 @@ namespace Team_16_Centric_Project.Controllers
 
         public ActionResult Index(string searchString)
         {
-            var testusers = from u in db.Users select u;
-            if (!String.IsNullOrEmpty(searchString))
+            if (User.Identity.IsAuthenticated)
             {
-                testusers = testusers.Where(u =>
-                u.lastName.Contains(searchString)
-                || u.firstName.Contains(searchString));
-                // if here, users were found so view them
-                return View(testusers.ToList());
+                var testusers = from u in db.Users select u;
+                if (!String.IsNullOrEmpty(searchString))
+                {
+                    testusers = testusers.Where(u =>
+                    u.lastName.Contains(searchString)
+                    || u.firstName.Contains(searchString));
+                    // if here, users were found so view them
+                    return View(testusers.ToList());
+                }
+                return View(db.Users.ToList());
             }
-            return View(db.Users.ToList());
+            else
+            { return View("NotAuthenticated"); }
         }
 
 
