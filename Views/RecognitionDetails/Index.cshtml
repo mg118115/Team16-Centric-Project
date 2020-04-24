@@ -18,11 +18,9 @@
             @Html.DisplayNameFor(model => model.Recognition.description)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.qtyOrdered)
+            @Html.DisplayNameFor(model => model.numberRecognitions)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.price)
-        </th>
+       
         <th></th>
     </tr>
 
@@ -35,11 +33,9 @@
             @Html.DisplayFor(modelItem => item.Recognition.description)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.qtyOrdered)
+            @Html.DisplayFor(modelItem => item.numberRecognitions)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.price)
-        </td>
+       
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.RecognitionDetailID }) |
             @Html.ActionLink("Details", "Details", new { id=item.RecognitionDetailID }) |

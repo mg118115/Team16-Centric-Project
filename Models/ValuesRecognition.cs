@@ -16,8 +16,8 @@ namespace Team_16_Centric_Project.Models
     public class RecognitionDetail
     {
         public int RecognitionDetailID { get; set; }
-        public int qtyOrdered { get; set; }
-        public decimal price { get; set; }
+        public int numberRecognitions { get; set; }
+ 
         // the next two properties link the orderDetail to the Order
         public int recognitionID { get; set; }
         public virtual Recognition Recognition { get; set; }
