@@ -63,7 +63,7 @@ namespace Team_16_Centric_Project.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "userId,Email,Password,ConfirmPassword,firstName,lastName,businessUnit,hireDate,Title")] User user)
+        public ActionResult Create([Bind(Include = "userId,Email,firstName,lastName,businessUnit,hireDate,Title")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace Team_16_Centric_Project.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "userId,Email,Password,ConfirmPassword,firstName,lastName,businessUnit,hireDate,Title")] User user)
+        public ActionResult Edit([Bind(Include = "userId,Email,firstName,lastName,businessUnit,hireDate,Title")] User user)
         {
             if (ModelState.IsValid)
             {

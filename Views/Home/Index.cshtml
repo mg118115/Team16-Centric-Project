@@ -2,11 +2,12 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>Welcome to Centric</h1>
-    <p class="lead">Digital, business and technology consulting to transform your business</p>
-    <p><a href="https://centricconsulting.com/about-us/" class="btn btn-default btn-lg">Learn more &raquo;</a></p>
-</div>
+    <div class="jumbotron">
+        <h1>Welcome to Centric</h1>
+        <p class="lead">Sign up for our new recognition program here!</p>
+        <input type="button" class="btn btn-success" value="Let's Go!" onclick="location.href='@Url.Action("Index", "EmployeeRecognitions")'" />
+
+    </div>
 
 <div class="row">
     <div class="col-md-4">
