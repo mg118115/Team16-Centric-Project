@@ -52,7 +52,7 @@ namespace Team_16_Centric_Project.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "employeeRecognitionID,firstName,lastName,email,phone")] EmployeeRecognition employeeRecognition)
+        public ActionResult Create([Bind(Include = "employeeRecognitionID,firstName,email,phone")] EmployeeRecognition employeeRecognition)
         {
             if (ModelState.IsValid)
             {
@@ -84,7 +84,7 @@ namespace Team_16_Centric_Project.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "employeeRecognitionID,firstName,lastName,email,phone")] EmployeeRecognition employeeRecognition)
+        public ActionResult Edit([Bind(Include = "employeeRecognitionID,firstName,email,phone")] EmployeeRecognition employeeRecognition)
         {
             if (ModelState.IsValid)
             {
